@@ -7,7 +7,7 @@ import Input from './input'
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
-Vue.component('g-input',Input)
+Vue.component('g-input', Input)
 
 new Vue({
   el: '#app',
@@ -15,11 +15,25 @@ new Vue({
     loading1: false,
     loading2: false,
     loading3: false
+  },
+  create() {
+    setTimeout(() => {
+      let event = new Event('change')
+      let inputElement = this.$el.querySelector('input')
+      inputElement.dispatchEvent(event)
+      console.log('hi')
+    }, 3000)
+  },
+  methods: {
+    inputChange(e) {
+      console.log(e)
+    }
   }
 })
 
 import chai from 'chai'
 import spies from 'chai-spies'
+
 chai.use(spies)
 const expect = chai.expect
 
@@ -94,8 +108,9 @@ const expect = chai.expect
     }
   })
   vm.$mount()
-  let spy = chai.spy(function(){})
-  vm.$on('click',spy)
+  let spy = chai.spy(function () {
+  })
+  vm.$on('click', spy)
   let button = vm.$el
   button.click()
   expect(spy).to.have.been.called()
