@@ -4,6 +4,7 @@
   "description": "## 作者：Ricky",
   "main": "index.js",
   "scripts": {
+    "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-minify && karma start --single-run"
   },
