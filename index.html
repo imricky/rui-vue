@@ -2,11 +2,21 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>轱辘</title>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
     html {
       --button-height: 32px;
       --font-size: 14px;
@@ -17,15 +27,17 @@
       --border-color: #999;
       --border-color-hover: #666;
     }
+
     #app {
       margin: 20px;
     }
+
     body {
       font-size: var(--font-size);
     }
   </style>
   <style>
-    .box{
+    .box {
       margin: 20px;
     }
   </style>
@@ -35,13 +47,23 @@
   <div style="border: 1px solid black;">
 
     <g-row gutter="20">
-      <g-col>1</g-col>
-      <g-col>2</g-col>
-    </g-row>
-    <g-row gutter="20">
-      <g-col>1</g-col>
-      <g-col>2</g-col>
-      <g-col>3</g-col>
+      <g-col span="2"
+             :phone="{span:24}"
+             :ipad="{span:8}"
+             :narrow-pc="{span:4}"
+             :pc="{span:2}"
+             :wide-pc="{span:1}"
+      >
+        1
+      </g-col>
+      <g-col span="22"
+             :phone="{span:24}"
+             :ipad="{span:16}"
+             :narrow-pc="{span:20}"
+             :pc="{span:22}"
+             :wide-pc="{span:23}"
+      >11
+      </g-col>
     </g-row>
     <g-row gutter="20">
       <g-col>1</g-col>
