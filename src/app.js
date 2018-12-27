@@ -12,6 +12,8 @@ import Content from './content'
 import Footer from './footer'
 import Toast from './toast'
 import plugin from './plugin'
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -24,8 +26,10 @@ Vue.component('g-header', Header)
 Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
-Vue.component('g-toast',Toast)
+Vue.component('g-toast', Toast)
 Vue.use(plugin)
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
 
 
 new Vue({
@@ -34,7 +38,9 @@ new Vue({
     loading1: false,
     loading2: false,
     loading3: false,
-    message: 'hi'
+    message: 'hi',
+    selectedTab: ['2', '1']
+
   },
   create() {
     setTimeout(() => {
@@ -48,7 +54,7 @@ new Vue({
     inputChange(e) {
       console.log(e)
     },
-    showToast(){
+    showToast() {
       this.$toast('我是 message')
     }
   }
