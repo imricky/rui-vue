@@ -1,10 +1,9 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}"
-          @click="$emit('click')"
-  >
+  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}"
+          @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
-    <div class="content">
+    <div class="g-button-content">
       <slot></slot>
     </div>
   </button>
@@ -35,6 +34,7 @@
 </script>
 <style lang="scss" scoped>
   @import "var";
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -68,7 +68,7 @@
       outline: none;
     }
 
-    > .content {
+    > .g-button-content {
       order: 2;
     }
 
@@ -78,7 +78,7 @@
     }
 
     &.icon-right {
-      > .content {
+      > .g-button-content {
         order: 1;
       }
 
@@ -91,7 +91,6 @@
 
     .loading {
       animation: spin 2s infinite linear;
-
     }
   }
 </style>

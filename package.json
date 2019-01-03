@@ -26,6 +26,8 @@
   "homepage": "https://github.com/imricky/gulu#readme",
   "dependencies": {
     "button": "^1.1.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vue": "2.5.16",
     "vue-hot-reload-api": "^2.3.1"
   },
