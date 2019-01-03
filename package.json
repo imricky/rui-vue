@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-minify && karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
   "homepage": "https://github.com/imricky/gulu#readme",
   "dependencies": {
     "button": "^1.1.1",
-    "vue": "^2.5.17",
+    "vue": "2.5.16",
     "vue-hot-reload-api": "^2.3.1"
   },
   "devDependencies": {
@@ -42,7 +44,9 @@
     "sass": "^1.15.0",
     "sinon": "^7.1.1",
     "sinon-chai": "^3.2.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-server-renderer": "2.5.16",
+    "vue-template-compiler": "2.5.16",
+    "vuepress": "^0.14.8"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
