@@ -1,30 +1,42 @@
-## 轱辘--先进的VUE组件库
+# rui-vue
 
-[![Build Status](https://www.travis-ci.org/imricky/gulu.svg?branch=master)](https://www.travis-ci.org/imricky/gulu)
-
-## 简介
-一个模仿fankfang Vue 组件库
-
-## 安装
-1. 添加 CSS 样式
-
-  使用本框架前，请在 CSS 中开启 border-box
-  
-   ```
-  *,*::before,*::after{box-sizing: border-box;}
-  
-  ```
-  
-  IE 8 及以上浏览器都支持此样式。
-2.  
-```javascript
-npm install
+## Project setup
+```
+yarn install
 ```
 
-## 文档
+## Add CSS Class
+```
+使用本框架前，请在 CSS 中开启 border-box
 
-## 提问
+*,*::before,*::after{box-sizing: border-box;}
 
-## 变更记录
+IE 8 及以上浏览器都支持此样式
+```
 
-## 贡献代码
+
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Run your unit tests
+```
+yarn run test:unit
+```
+

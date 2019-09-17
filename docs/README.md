@@ -1,3 +1,2 @@
-# Gulu 一个前端组件库
 
-一个初学者的vue组件探索之路
+# Hello rui-vue!

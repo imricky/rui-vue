@@ -75,4 +75,6 @@ typings/
 .serverless
 .idea/
 dist/
-
+.vscode/
+.cache/
+yarn-error.log

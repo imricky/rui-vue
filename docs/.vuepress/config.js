@@ -1,28 +1,37 @@
 module.exports = {
-  base: '/gulu/',
-  title: 'Gulu Vue 组件',
-  description: 'A Simple Vue Component library',
+  title: 'Rui-Vue',
+  description: 'The Way to Explore Vue Components',
   themeConfig: {
-    nav: [
-      { text: '主页', link: '/' },
-      { text: '导航', link: '/guide/' },
-      { text: '扩展', link: 'https://google.com' },
-    ],
+    lastUpdated: 'Last Updated', // string | boolean最后更新时间
     sidebar: [
       {
-        title: '入门',
+        title: '介绍',
+        collapsable: false,
         children: [
-          '/install/',
-          '/get-start/',
+          '/getstart/',
         ]
       },
       {
         title: '组件',
         children: [
           '/components/button',
+          '/components/input',
+          '/components/row',
+          '/components/popover',
+          '/components/toast',
+          '/components/pagebar',
         ]
       },
     ],
-    lastUpdated: 'Last Updated',
+    // sidebar: [
+    //   '/',
+    //   '/about',
+    // ],
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: '博客', link: 'http://blogv2.rickyer.com' },
+      { text: '短链接', link: 'http://su.rickyer.com' },
+      { text: 'Github', link: 'https://github.com/imricky' },
+    ]
   }
 }
