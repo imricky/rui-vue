@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Rui-Vue',
   description: 'The Way to Explore Vue Components',
+  base:'/rui-vue/',
   themeConfig: {
     lastUpdated: 'Last Updated', // string | boolean最后更新时间
     sidebar: [
